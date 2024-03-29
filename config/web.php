@@ -13,6 +13,8 @@ $config = [
     ],
     'components' => [
         'request' => [
+            // !!! CSRF Validation false on production
+            'enableCsrfValidation' => false,
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'GzQAUf3htYoJn9sGsAx9Pu3-NPIVcuIQ',
         ],
@@ -42,14 +44,12 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
